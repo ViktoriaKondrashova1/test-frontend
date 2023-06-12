@@ -1,6 +1,6 @@
 import { Admin, Resource, ListGuesser } from "react-admin";
 import dataProvider from "./dataProvider";
-import "./App.css";
+import "./App.scss";
 
 // const dataProvider = simpleRestProvider(
 //   "http://3.65.149.62/test-api",
