@@ -1,5 +1,6 @@
-import { Admin, Resource, ListGuesser } from "react-admin";
+import { Admin, Resource } from "react-admin";
 import dataProvider from "./dataProvider";
+import ContactsList from "./components/ContactsList/ContactsList";
 import "./App.scss";
 
 // const dataProvider = simpleRestProvider(
@@ -10,7 +11,7 @@ import "./App.scss";
 const App = () => {
   return (
     <Admin dataProvider={dataProvider.getContacts}>
-      <Resource name="contacts" list={ListGuesser} />
+      <Resource name="contacts" list={ContactsList} />
     </Admin>
   );
 };
