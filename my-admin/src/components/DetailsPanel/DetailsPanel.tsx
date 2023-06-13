@@ -1,24 +1,33 @@
 import { useRecordContext } from "react-admin";
+import { useState } from "react";
 import "./DetailsPanel.scss";
 
 const DetailsPanel = () => {
   const record = useRecordContext();
+  const [isShow, setIsShow] = useState<boolean>(false);
   return (
     <div className="details-panel">
       <div className="details-panel__content">
+        <div className="details-panel__btn-wrap">
+          {isShow ? (
+            <h2 className="details-panel__name">{record.company}</h2>
+          ) : (
+            <button
+              className="details-panel__button"
+              onClick={() => setIsShow(true)}
+            >
+              <div className="details-panel__btn-icon" />
+              Get access to name
+            </button>
+          )}
+        </div>
         <div className="details-panel__wrap">
           <h3 className="details-panel__title">Job title</h3>
           <div className="details-panel__text">{record.job_title}</div>
-        </div>
-        <div className="details-panel__job">
           <h3 className="details-panel__title">Industry</h3>
           <div className="details-panel__text">{record.industry}</div>
-        </div>
-        <div className="details-panel__job">
           <h3 className="details-panel__title">Location</h3>
           <div className="details-panel__text">{record.country}</div>
-        </div>
-        <div className="details-panel__job">
           <h3 className="details-panel__title">Description</h3>
           <div className="details-panel__text">{record.description}</div>
         </div>

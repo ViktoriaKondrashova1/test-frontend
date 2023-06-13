@@ -12,7 +12,48 @@
     width: 100%;
     border: 1px solid #e7e8ef;
     border-radius: 8px;
-    padding: 24px 16px;
+    padding: 24px 0;
+  }
+
+  &__btn-wrap {
+    padding: 0 16px 24px 16px;
+    border-bottom: 1px solid #e7e8ef;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3626a7;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    padding: 11px 0;
+    cursor: pointer;
+  }
+
+  &__btn-icon {
+    background-image: url(../../assets/svg/Icon_User-white.svg);
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #151515;
+    margin: 0;
+  }
+
+  &__wrap {
+    padding: 0 16px;
   }
 
   &__title {
