@@ -1,0 +1,31 @@
+.details-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 440px;
+  padding: 40px 16px 0 16px;
+  background-color: white;
+  z-index: 1;
+
+  &__content {
+    width: 100%;
+    border: 1px solid #e7e8ef;
+    border-radius: 8px;
+    padding: 24px 16px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9195a4;
+    margin: 16px 0 4px 0;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #151515;
+  }
+}
