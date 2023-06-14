@@ -9,7 +9,10 @@ const CustomLayout = (props: JSX.IntrinsicAttributes & LayoutProps) => {
       {...props}
       appBar={CustomAppBar}
       sidebar={FilterSidebar}
-      sx={{ "& .RaLayout-appFrame": { marginTop: 0 } }}
+      sx={{
+        "& .RaLayout-appFrame": { marginTop: 0, backgroundColor: "white" },
+        "& .RaLayout-content": { backgroundColor: "white" },
+      }}
     />
   );
 };
