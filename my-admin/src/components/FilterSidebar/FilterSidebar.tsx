@@ -1,10 +1,11 @@
-import { Card } from "@mui/material";
+import "./FilterSidebar.scss";
 
 const FilterSidebar = () => {
   return (
-    <Card>
+    <div className="filters">
       <h3>Filters</h3>
-    </Card>
+      <div className="filters__wrapper">1</div>
+    </div>
   );
 };
 
