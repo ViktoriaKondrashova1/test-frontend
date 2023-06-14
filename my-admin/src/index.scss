@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 /* mulish-200 - latin */
 @font-face {
   font-display: swap;
@@ -71,7 +73,7 @@ body {
 html {
   font-family: Mulish, Inter, sans-serif;
   font-size: 16px;
-  // color: var(--color-text);
+  color: $text-color;
 }
 
 a {
