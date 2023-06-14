@@ -13,19 +13,6 @@ const ContactsList = () => {
         expand={<DetailsPanel />}
         isRowExpandable={(row) => row}
         empty={<NoResults />}
-        className="contacts-table"
-        sx={{
-          "& .RaDatagrid-headerCell": {
-            backgroundColor: "#e7e8ef",
-            height: "48px",
-          },
-          "& .RaDatagrid-row": {
-            height: "56px",
-          },
-          "& .RaDatagrid-expandIcon": {
-            display: "none",
-          },
-        }}
       >
         <NameField source="company" label="Full name" />
         <TextField source="job_title" />
