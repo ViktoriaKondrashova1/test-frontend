@@ -1,0 +1,19 @@
+.name-button {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e7e8ef;
+  border-radius: 8px;
+  padding: 10px 24px;
+  color: #3626a7;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+
+  &__icon {
+    background-image: url(../../assets/svg/Icon-user.svg);
+    height: 23px;
+    width: 22px;
+    margin-right: 8px;
+  }
+}
