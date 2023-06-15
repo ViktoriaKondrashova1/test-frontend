@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+.header {
+  height: 72px;
+  display: flex;
+
+  &__logo-wrap {
+    width: 252px;
+    border-right: 1px solid $highlight-gray;
+  }
+
+  &__logo {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $logo-color;
+    margin: 0;
+    padding: 24px 0 0 24px;
+  }
+
+  &__total {
+    padding: 24px 0 0 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-right: 8px;
+  }
+
+  &__total-count {
+    display: flex;
+    margin: auto 0;
+    height: fit-content;
+    padding: 4px 17px;
+    background: rgba(54, 38, 167, 0.1);
+    border-radius: 26px;
+    color: $logo-color;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
