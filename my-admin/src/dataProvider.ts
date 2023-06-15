@@ -13,19 +13,47 @@ const httpClient = async (url: string, options: fetchUtils.Options = {}) => {
 };
 
 const dataProvider = {
-  getContacts: async () => {
-    const url = `${apiUrl}/contacts?range=%5B0%2C10%5D`;
+  getList: async (
+    resource: string,
+    params: {
+      pagination: { page: any; perPage: any };
+      sort: { field: any; order: any };
+      filter: any;
+    }
+  ) => {
+    const { page, perPage } = params.pagination;
+    const { field, order } = params.sort;
+    const query = {
+      sort: JSON.stringify([field, order]),
+      range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
+      filter: JSON.stringify(params.filter),
+    };
+    const url = `${apiUrl}/${resource}?${JSON.stringify(query)}`;
+    // const url = `${apiUrl}/contacts?range=%5B0%2C10%5D`;
     return httpClient(url).then(({ headers, json }) => ({
       data: json,
       total: parseInt(headers.get("content-range")!.split("/").pop()!, 10),
     }));
   },
-  getContact: async (id: string) => {
+  getOne: async (id: string) => {
     const url = `${apiUrl}/contacts/contact/${id}`;
     return httpClient(url).then(({ json }) => ({
       data: json,
     }));
   },
+  getCountries: async () => {
+    const url = `${apiUrl}/contacts/countries`;
+    return httpClient(url).then(({ json }) => ({
+      data: json,
+    }));
+  },
+  getMany: () => {},
+  getManyReference: () => {},
+  create: () => {},
+  update: () => {},
+  updateMany: () => {},
+  delete: () => {},
+  deleteMany: () => {},
 };
 
 export default dataProvider;

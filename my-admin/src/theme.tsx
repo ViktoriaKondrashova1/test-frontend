@@ -54,6 +54,36 @@ const theme = {
         },
       },
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "none",
+          margin: "0",
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        input: {
+          padding: "0 0 0 36px",
+          borderRadius: "6px",
+          fontSize: "14px",
+          lineHeight: "24px",
+          height: "40px",
+          fontFamily: "Mulish",
+          "&::placeholder": {
+            color: "#9195A4",
+          },
+        },
+      },
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          // display: "none",
+        },
+      },
+    },
     RaLayout: {
       styleOverrides: {
         root: {
@@ -62,8 +92,16 @@ const theme = {
             backgroundColor: "white",
           },
           "& .RaLayout-content": {
-            padding: "0 24px",
+            padding: "24px 24px 0 0",
+            borderTop: "1px solid #e7e8ef",
           },
+        },
+      },
+    },
+    RaSidebar: {
+      styleOverrides: {
+        root: {
+          display: "none",
         },
       },
     },
