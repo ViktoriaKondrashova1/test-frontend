@@ -2,5 +2,35 @@
 
 .filters {
   width: 252px;
-  box-shadow: none;
+  border: none;
+  border-right: 1px solid $highlight-gray;
+  order: -1;
+  margin-right: 24px;
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px 24px;
+    border-bottom: 1px solid $highlight-gray;
+  }
+
+  &__wrapper {
+    border-bottom: 1px solid $highlight-gray;
+    padding: 16px 24px;
+  }
+
+  &__job {
+    border-bottom: 1px solid $highlight-gray;
+    padding-bottom: 16px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 8px;
+  }
 }
