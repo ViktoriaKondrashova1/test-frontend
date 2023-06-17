@@ -93,7 +93,6 @@ const theme = {
           },
           "& .RaLayout-content": {
             padding: "24px 24px 0 0",
-            borderTop: "1px solid #e7e8ef",
           },
         },
       },
