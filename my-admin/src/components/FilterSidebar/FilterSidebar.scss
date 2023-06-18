@@ -6,6 +6,7 @@
   border-right: 1px solid $highlight-gray;
   order: -1;
   margin-right: 24px;
+  padding-top: 24px;
 
   &__title {
     margin: 0;
@@ -29,10 +30,18 @@
   }
 
   &__subtitle {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
     margin: 0;
     margin-bottom: 8px;
+  }
+
+  &__icon {
+    width: 15px;
+    height: 100%;
+    margin-right: 9px;
   }
 }

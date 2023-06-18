@@ -45,6 +45,15 @@ const theme = {
         },
       },
     },
+    RaList: {
+      styleOverrides: {
+        root: {
+          "& .RaList-main": {
+            paddingTop: "24px",
+          },
+        },
+      },
+    },
     MuiPaper: {
       styleOverrides: {
         root: {
@@ -67,15 +76,15 @@ const theme = {
         root: {
           borderColor: "#E7E8EF",
           borderRadius: "6px",
-          input: {
-            padding: "0 0 0 36px",
-            fontSize: "14px",
-            lineHeight: "24px",
-            height: "40px",
-            fontFamily: "Mulish",
-            "&::placeholder": {
-              color: "#9195A4",
-            },
+        },
+        input: {
+          padding: "0 0 0 36px",
+          fontSize: "14px",
+          lineHeight: "24px",
+          height: "40px",
+          fontFamily: "Mulish",
+          "&::placeholder": {
+            color: "#9195A4",
           },
         },
       },
@@ -111,7 +120,7 @@ const theme = {
             backgroundColor: "white",
           },
           "& .RaLayout-content": {
-            padding: "24px 24px 0 0",
+            padding: "0 24px 0 0",
           },
         },
       },
