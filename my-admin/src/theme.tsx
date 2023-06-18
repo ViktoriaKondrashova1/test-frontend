@@ -64,23 +64,42 @@ const theme = {
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        input: {
-          padding: "0 0 0 36px",
+        root: {
+          borderColor: "#E7E8EF",
           borderRadius: "6px",
-          fontSize: "14px",
-          lineHeight: "24px",
-          height: "40px",
-          fontFamily: "Mulish",
-          "&::placeholder": {
-            color: "#9195A4",
+          input: {
+            padding: "0 0 0 36px",
+            fontSize: "14px",
+            lineHeight: "24px",
+            height: "40px",
+            fontFamily: "Mulish",
+            "&::placeholder": {
+              color: "#9195A4",
+            },
           },
         },
       },
     },
-    MuiSvgIcon: {
+    MuiInputBase: {
+      styleOverrides: {
+        sizeSmall: {
+          height: "40px",
+        },
+      },
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        input: {
+          height: "fit-content",
+          fontSize: "14px",
+          lineHeight: "24px",
+        },
+      },
+    },
+    MuiFormHelperText: {
       styleOverrides: {
         root: {
-          // display: "none",
+          display: "none",
         },
       },
     },
