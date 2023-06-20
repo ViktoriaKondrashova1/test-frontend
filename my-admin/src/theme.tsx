@@ -98,10 +98,20 @@ const theme = {
     },
     MuiAutocomplete: {
       styleOverrides: {
+        root: {
+          width: "100%",
+        },
         input: {
           height: "fit-content",
           fontSize: "14px",
           lineHeight: "24px",
+        },
+      },
+    },
+    RaFilterFormInput: {
+      styleOverrides: {
+        root: {
+          width: "100%",
         },
       },
     },

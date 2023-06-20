@@ -1,4 +1,4 @@
-import { FilterLiveSearch, Form } from "react-admin";
+import { SearchInput, Filter } from "react-admin";
 import { useState } from "react";
 import FilterInput from "../Inputs/FilterInput/FilterInput.tsx";
 import jobIcon from "../../assets/svg/job.svg";
@@ -27,36 +27,43 @@ const FilterSidebar = () => {
         )}
       </div>
       <div className="filters__wrapper">
-        <Form>
-          <h4 className="filters__subtitle">
-            <img className="filters__icon" src={jobIcon} alt="job icon" />
-            Job title
-          </h4>
-          <FilterLiveSearch
+        <h4 className="filters__subtitle">
+          <img className="filters__icon" src={jobIcon} alt="job icon" />
+          Job title
+        </h4>
+        <Filter>
+          <SearchInput
             source="job_title"
             placeholder=" Search by job title"
+            alwaysOn
           />
-          <div className="filters__line" />
-          <h4 className="filters__subtitle">
-            <img className="filters__icon" src={locationIcon} alt="job icon" />
-            Location
-          </h4>
+        </Filter>
+        <div className="filters__line" />
+        <h4 className="filters__subtitle">
+          <img className="filters__icon" src={locationIcon} alt="job icon" />
+          Location
+        </h4>
+        <Filter>
           <FilterInput
-            source="Choose location"
-            reference="contacts"
-            optionText="country"
+            source="country"
+            label="Choose location"
+            url="contacts/countries"
+            alwaysOn
           />
-          <div className="filters__line" />
-          <h4 className="filters__subtitle">
-            <img className="filters__icon" src={industryIcon} alt="job icon" />
-            Industry
-          </h4>
+        </Filter>
+        <div className="filters__line" />
+        <h4 className="filters__subtitle">
+          <img className="filters__icon" src={industryIcon} alt="job icon" />
+          Industry
+        </h4>
+        <Filter>
           <FilterInput
-            source="Choose industry"
-            reference="contacts"
-            optionText="industry"
+            source="industry"
+            label="Choose industry"
+            url="contacts/industries"
+            alwaysOn
           />
-        </Form>
+        </Filter>
       </div>
     </div>
   );

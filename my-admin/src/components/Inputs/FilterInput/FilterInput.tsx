@@ -1,23 +1,17 @@
-import { AutocompleteInput, ReferenceInput } from "react-admin";
+import { AutocompleteInput, useGetMany } from "react-admin";
 
 interface ICountryInputProps {
   source: string;
-  reference: string;
-  optionText: string;
+  label: string;
+  url: string;
+  alwaysOn: boolean;
 }
 
-const FilterInput = ({ source, reference, optionText }: ICountryInputProps) => {
-  const filterToQuery = (searchText: string) => ({
-    country: `%${searchText}%`,
-  });
+const FilterInput = ({ source, label, url }: ICountryInputProps) => {
+  const { data } = useGetMany(url, { ids: [1, 2] });
 
   return (
-    <ReferenceInput source={source} reference={reference}>
-      <AutocompleteInput
-        filterToQuery={filterToQuery}
-        optionText={optionText}
-      />
-    </ReferenceInput>
+    <AutocompleteInput source={source} label={label} choices={data} alwaysOn />
   );
 };
 

@@ -6,12 +6,13 @@ const CustomAppBar = () => {
   const { total } = useGetList("contacts", {
     pagination: { page: 1, perPage: 10 },
     sort: { field: "job_title", order: "ASC" },
-    filter: JSON.parse(localStorage.getItem("RaStore.contacts.listParams")!)
-      .filter,
+    filter: localStorage.getItem("RaStore.contacts.listParams")
+      ? JSON.parse(localStorage.getItem("RaStore.contacts.listParams")!).filter
+      : {},
   });
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="header__logo-wrap">
         <h1 className="header__logo">logo</h1>
       </div>
@@ -21,7 +22,7 @@ const CustomAppBar = () => {
           {total ? numberFormatter(total) : 0}
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
