@@ -1,5 +1,4 @@
-import { SearchInput, Filter } from "react-admin";
-import { useState } from "react";
+import { SearchInput, Filter, useListParams } from "react-admin";
 import FilterInput from "../Inputs/FilterInput/FilterInput.tsx";
 import jobIcon from "../../assets/svg/job.svg";
 import locationIcon from "../../assets/svg/location.svg";
@@ -7,11 +6,12 @@ import industryIcon from "../../assets/svg/Industry.svg";
 import "./FilterSidebar.scss";
 
 const FilterSidebar = () => {
-  const [filtersApplied, setFiltersApplied] = useState<number>(0);
+  const [listParams] = useListParams({
+    resource: "contacts",
+  });
+  const filtersApplied = Object.keys(listParams.filter).length;
 
-  const resetFilters = () => {
-    setFiltersApplied(0);
-  };
+  const resetFilters = () => {};
 
   return (
     <div className="filters">

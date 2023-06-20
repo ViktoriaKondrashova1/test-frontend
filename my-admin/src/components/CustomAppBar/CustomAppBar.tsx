@@ -1,15 +1,8 @@
-import { useGetList } from "react-admin";
-import { numberFormatter } from "../../helper";
+import { Count } from "react-admin";
 import "./CustomAppBar.scss";
 
 const CustomAppBar = () => {
-  const { total } = useGetList("contacts", {
-    pagination: { page: 1, perPage: 10 },
-    sort: { field: "job_title", order: "ASC" },
-    filter: localStorage.getItem("RaStore.contacts.listParams")
-      ? JSON.parse(localStorage.getItem("RaStore.contacts.listParams")!).filter
-      : {},
-  });
+  const filters = localStorage.getItem("RaStore.contacts.listParams");
 
   return (
     <header className="header">
@@ -19,7 +12,12 @@ const CustomAppBar = () => {
       <div className="header__total-wrap">
         <div className="header__total">Total</div>
         <div className="header__total-count">
-          {total ? numberFormatter(total) : 0}
+          {
+            <Count
+              resource="contacts"
+              filter={filters ? JSON.parse(filters).filter : {}}
+            />
+          }
         </div>
       </div>
     </header>
