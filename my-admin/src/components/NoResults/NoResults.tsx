@@ -1,6 +1,13 @@
+import { useListContext } from "react-admin";
 import "./NoResults.scss";
 
 const NoResults = () => {
+  const { setFilters } = useListContext();
+
+  const resetFilters = () => {
+    setFilters({}, []);
+  };
+
   return (
     <div className="no-results">
       <div className="no-results__img" />
@@ -9,7 +16,9 @@ const NoResults = () => {
         We couldn’t find what you searched for. <br />
         Please try again.
       </p>
-      <button className="no-results__btn">Clear filters</button>
+      <button className="no-results__btn" onClick={resetFilters}>
+        Clear filters
+      </button>
     </div>
   );
 };

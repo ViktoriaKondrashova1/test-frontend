@@ -122,6 +122,13 @@ const theme = {
         },
       },
     },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          display: "none",
+        },
+      },
+    },
     RaLayout: {
       styleOverrides: {
         root: {
