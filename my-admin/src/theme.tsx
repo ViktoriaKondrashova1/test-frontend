@@ -172,6 +172,24 @@ const theme = {
         },
       },
     },
+    MuiTablePagination: {
+      styleOverrides: {
+        spacer: {
+          flexGrow: "initial",
+          flexShrink: "initial",
+          flexBasis: "initial",
+        },
+      },
+    },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          "&.MuiTablePagination-toolbar": {
+            paddingLeft: "0",
+          },
+        },
+      },
+    },
   },
 };
 
