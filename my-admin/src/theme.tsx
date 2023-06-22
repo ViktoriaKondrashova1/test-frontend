@@ -112,6 +112,9 @@ const theme = {
       styleOverrides: {
         root: {
           width: "100%",
+          ".RaFilterFormInput-spacer": {
+            display: "none",
+          },
         },
       },
     },

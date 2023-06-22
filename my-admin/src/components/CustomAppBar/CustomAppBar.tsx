@@ -1,8 +1,10 @@
-import { Count } from "react-admin";
+import { Count, useListParams } from "react-admin";
 import "./CustomAppBar.scss";
 
 const CustomAppBar = () => {
-  const filters = localStorage.getItem("RaStore.contacts.listParams");
+  const [listParams] = useListParams({
+    resource: "contacts",
+  });
 
   return (
     <header className="header">
@@ -12,12 +14,7 @@ const CustomAppBar = () => {
       <div className="header__total-wrap">
         <div className="header__total">Total</div>
         <div className="header__total-count">
-          {
-            <Count
-              resource="contacts"
-              filter={filters ? JSON.parse(filters).filter : {}}
-            />
-          }
+          {<Count resource="contacts" filter={listParams.filter} />}
         </div>
       </div>
     </header>

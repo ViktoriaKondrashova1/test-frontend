@@ -17,10 +17,6 @@ const FilterSidebar = () => {
   });
   const filtersApplied = Object.keys(listParams.filter).length;
 
-  const resetFilters = () => {
-    setFilters({}, []);
-  };
-
   return (
     <div className="filters">
       <div className="filters__title-wrap">
@@ -28,7 +24,10 @@ const FilterSidebar = () => {
         {filtersApplied > 0 && (
           <>
             <div className="filters__count">{filtersApplied}</div>
-            <button className="filters__clear-btn" onClick={resetFilters}>
+            <button
+              className="filters__clear-btn"
+              onClick={() => setFilters({}, [])}
+            >
               Clear filter
             </button>
           </>
