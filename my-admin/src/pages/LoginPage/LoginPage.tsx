@@ -21,19 +21,30 @@ const LoginPage = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt
         </p>
-        <form onSubmit={handleSubmit}>
-          <input
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            name="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+        <form onSubmit={handleSubmit} className="login__form__wrap">
+          <label htmlFor="email" className="login__form__label">
+            Email
+            <input
+              className="login__form__input"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+          <label htmlFor="password" className="login__form__label">
+            Password
+            <input
+              className="login__form__input"
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          <input type="submit" className="login__form__submit" value="Login" />
         </form>
       </div>
       <div className="login__logo">1</div>
