@@ -1,11 +1,29 @@
-import { Admin, Resource } from "react-admin";
-import dataProvider from "../../dataProvider";
+import { Admin, Resource, fetchUtils } from "react-admin";
+import simpleRestProvider from "ra-data-simple-rest";
 import ContactsList from "../../components/ContactsList/ContactsList";
 import CustomLayout from "../../components/CustomLayout/CustomLayout";
+import { getToken } from "../../api/api";
+import theme from "../../theme";
+
+const httpClient = async (url: string, options: fetchUtils.Options = {}) => {
+  const token = await getToken().then((value) => value.accessToken);
+  const user = {
+    token: `Bearer ${token}`,
+    authenticated: !!token,
+  };
+  return fetchUtils.fetchJson(url, { ...options, user });
+};
 
 const MainPage = () => {
   return (
-    <Admin dataProvider={dataProvider.getContacts} layout={CustomLayout}>
+    <Admin
+      dataProvider={simpleRestProvider(
+        "http://3.65.149.62/test-api",
+        httpClient
+      )}
+      layout={CustomLayout}
+      theme={theme}
+    >
       <Resource name="contacts" list={ContactsList} />
     </Admin>
   );
