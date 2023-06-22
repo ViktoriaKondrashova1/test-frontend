@@ -3,11 +3,16 @@ import NoResults from "../NoResults/NoResults";
 import DetailsPanel from "../DetailsPanel/DetailsPanel";
 import NameField from "../NameField/NameField";
 import FilterSidebar from "../FilterSidebar/FilterSidebar";
+import CustomPagination from "../CustomPagination/CustomPagination";
 import "./ContactsList.scss";
 
 const ContactsList = () => {
   return (
-    <List actions={false} aside={<FilterSidebar />}>
+    <List
+      actions={false}
+      aside={<FilterSidebar />}
+      pagination={<CustomPagination />}
+    >
       <Datagrid
         bulkActionButtons={false}
         rowClick="expand"

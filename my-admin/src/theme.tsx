@@ -125,13 +125,6 @@ const theme = {
         },
       },
     },
-    MuiSvgIcon: {
-      styleOverrides: {
-        root: {
-          display: "none",
-        },
-      },
-    },
     RaLayout: {
       styleOverrides: {
         root: {
@@ -149,6 +142,51 @@ const theme = {
       styleOverrides: {
         root: {
           display: "none",
+        },
+      },
+    },
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          "&.Mui-selected": {
+            border: "1px solid #3626A7",
+            backgroundColor: "white",
+            padding: "4px 15px",
+          },
+        },
+        page: {
+          backgroundColor: "none",
+          borderRadius: "6px",
+          padding: "0",
+        },
+        previousNext: {
+          backgroundColor: "none",
+          borderRadius: "6px",
+          border: "1px solid #EBEBED",
+          margin: "0 12px",
+        },
+        text: {
+          color: "#151515",
+          fontSize: "14px",
+          lineHeight: "32px",
+        },
+      },
+    },
+    MuiTablePagination: {
+      styleOverrides: {
+        spacer: {
+          flexGrow: "initial",
+          flexShrink: "initial",
+          flexBasis: "initial",
+        },
+      },
+    },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          "&.MuiTablePagination-toolbar": {
+            paddingLeft: "0",
+          },
         },
       },
     },
