@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+.login {
+  display: flex;
+
+  &__form {
+    width: 50%;
+    height: 100vh;
+    padding: 114px 0 0 112px;
+
+    &__title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 40px;
+      margin: 0 0 8px 0;
+    }
+
+    &__text {
+      width: 357px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      margin: 0 0 48px 0;
+    }
+  }
+
+  &__logo {
+    width: 50%;
+    height: 100vh;
+    background-color: #f5f6f9;
+  }
+}
