@@ -2,6 +2,7 @@ import { Admin, Resource, fetchUtils } from "react-admin";
 import simpleRestProvider from "ra-data-simple-rest";
 import ContactsList from "../../components/ContactsList/ContactsList";
 import CustomLayout from "../../components/CustomLayout/CustomLayout";
+import LoginPage from "../LoginPage/LoginPage";
 import { getToken } from "../../api/api";
 import theme from "../../theme";
 
@@ -23,6 +24,7 @@ const MainPage = () => {
       )}
       layout={CustomLayout}
       theme={theme}
+      loginPage={LoginPage}
     >
       <Resource name="contacts" list={ContactsList} />
     </Admin>
