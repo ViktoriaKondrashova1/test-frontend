@@ -17,8 +17,8 @@ const ContactsList = () => {
         bulkActionButtons={false}
         rowClick="expand"
         expand={<DetailsPanel />}
-        isRowExpandable={(row) => row}
         empty={<NoResults />}
+        expandSingle
       >
         <NameField source="company" label="Full name" />
         <TextField source="job_title" />

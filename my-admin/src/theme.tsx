@@ -29,9 +29,19 @@ const theme = {
             height: "48px",
             fontWeight: 600,
             lineHeight: "24px",
+            paddingLeft: "32px",
+          },
+          "& .RaDatagrid-headerCell:first-of-type": {
+            display: "none",
+          },
+          "& .RaDatagrid-expandIconCell": {
+            display: "none",
           },
           "& .RaDatagrid-row": {
             height: "56px",
+          },
+          "& .RaDatagrid-rowCell": {
+            paddingLeft: "32px",
           },
           "& .RaDatagrid-expandIcon": {
             display: "none",
