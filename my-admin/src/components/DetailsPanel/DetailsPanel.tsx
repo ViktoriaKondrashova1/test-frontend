@@ -1,14 +1,19 @@
-import { useRecordContext } from "react-admin";
+import { useRecordContext, useExpanded } from "react-admin";
 import { useState } from "react";
 import "./DetailsPanel.scss";
 
 const DetailsPanel = () => {
   const record = useRecordContext();
+  const expandedItem = useExpanded("contacts", record.id);
+  const toggleExpanded = expandedItem[1];
   const [isShow, setIsShow] = useState<boolean>(false);
 
   return (
     <div className="details-panel">
-      <button className="details-panel__close" />
+      <button
+        className="details-panel__close"
+        onClick={() => toggleExpanded()}
+      />
       <div className="details-panel__wrap">
         <div className="details-panel__content">
           <div className="details-panel__btn-wrap">

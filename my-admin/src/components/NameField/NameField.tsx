@@ -10,13 +10,17 @@ interface INameFieldProps {
 const NameField = ({ source, label }: INameFieldProps) => {
   const [isShow, setIsShow] = useState<boolean>(false);
 
-  return isShow ? (
-    <TextField source={source} label={label} />
-  ) : (
-    <button className="name-button" onClick={() => setIsShow(true)}>
-      <div className="name-button__icon" />
-      Get the name
-    </button>
+  return (
+    <div className="name-field">
+      {isShow ? (
+        <TextField source={source} label={label} />
+      ) : (
+        <button className="name-field__button" onClick={() => setIsShow(true)}>
+          <div className="name-field__icon" />
+          Get the name
+        </button>
+      )}
+    </div>
   );
 };
 
