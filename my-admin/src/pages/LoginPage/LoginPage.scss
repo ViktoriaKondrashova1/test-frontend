@@ -2,10 +2,11 @@
 
 .login {
   display: flex;
+  min-height: 900px;
 
   &__wrap {
     width: 50%;
-    height: 100vh;
+    min-height: 900px;
     padding: 114px 0 0 112px;
   }
 
@@ -23,10 +24,53 @@
     font-weight: 600;
     margin: 0 0 48px 0;
   }
+}
+
+.logo {
+  width: 50%;
+  min-height: 900px;
+  background-color: #f5f6f9;
+  background-image: url(../../assets/png//login-bg.png);
+  position: relative;
+
+  &__img {
+    &__wrap {
+      height: 679px;
+    }
+
+    &_first {
+      position: absolute;
+      margin-left: 351px;
+      margin-top: 61px;
+    }
+
+    &_second {
+      position: absolute;
+      margin-left: 88px;
+      margin-top: 168px;
+    }
+
+    &_third {
+      position: absolute;
+      margin-left: 387px;
+      margin-top: 334px;
+    }
+  }
 
   &__logo {
-    width: 50%;
-    height: 100vh;
-    background-color: #f5f6f9;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 48px;
+    text-transform: uppercase;
+    padding: 21px 0 0 88px;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    padding: 8px 133px 0 88px;
+    margin: 0;
   }
 }
