@@ -7,17 +7,6 @@
   gap: 24px;
   position: relative;
 
-  &::after {
-    content: url("../../assets/svg/icon-eye.svg");
-    display: flex;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 142px;
-    left: 348px;
-    cursor: pointer;
-  }
-
   &__label {
     font-size: 14px;
     font-weight: 600;
@@ -37,6 +26,22 @@
       font-size: 14px;
       line-height: 20px;
     }
+  }
+
+  &__show-btn {
+    background-image: url(../../assets/svg/icon-eye.svg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 142px;
+    left: 348px;
+    cursor: pointer;
   }
 
   &__submit {
