@@ -1,4 +1,5 @@
-import { SearchInput, Filter, useListContext } from "react-admin";
+import { TextInput, Filter, useListContext, useStore } from "react-admin";
+import { useEffect } from "react";
 import FilterInput from "../Inputs/FilterInput/FilterInput.tsx";
 import jobIcon from "../../assets/svg/job.svg";
 import locationIcon from "../../assets/svg/location.svg";
@@ -8,6 +9,25 @@ import "./FilterSidebar.scss";
 const FilterSidebar = () => {
   const { setFilters, filterValues } = useListContext();
   const filtersApplied = Object.keys(filterValues).length;
+
+  const [recentSearch, setRecentSearch] = useStore<string[]>(
+    "recentSearch",
+    []
+  );
+
+  useEffect(() => {
+    if (
+      filterValues.job_title &&
+      !recentSearch.includes(filterValues.job_title)
+    ) {
+      if (recentSearch.length < 4) {
+        setRecentSearch([...recentSearch, filterValues.job_title]);
+      } else {
+        recentSearch.shift();
+        setRecentSearch([...recentSearch, filterValues.job_title]);
+      }
+    }
+  }, [filterValues.job_title]);
 
   return (
     <div className="filters">
@@ -31,11 +51,11 @@ const FilterSidebar = () => {
           Job title
         </h4>
         <Filter>
-          <SearchInput
+          <TextInput
             source="job_title"
-            placeholder=" Search by job title"
-            resettable={false}
+            label="Search by job title"
             alwaysOn
+            resettable
           />
         </Filter>
         <div className="filters__line" />

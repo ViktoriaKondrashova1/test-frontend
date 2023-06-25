@@ -29,7 +29,7 @@ const theme = {
             height: "48px",
             fontWeight: 600,
             lineHeight: "24px",
-            paddingLeft: "32px",
+            paddingLeft: "69px",
           },
           "& .RaDatagrid-headerCell:first-of-type": {
             display: "none",
@@ -41,7 +41,7 @@ const theme = {
             height: "56px",
           },
           "& .RaDatagrid-rowCell": {
-            paddingLeft: "32px",
+            paddingLeft: "69px",
           },
           "& .RaDatagrid-expandIcon": {
             display: "none",

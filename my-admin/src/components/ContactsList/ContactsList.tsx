@@ -19,6 +19,13 @@ const ContactsList = () => {
         expand={<DetailsPanel />}
         empty={<NoResults />}
         expandSingle
+        sx={{
+          "& .column-company": {
+            borderRight: "1px solid #E7E8EF",
+            width: "231px",
+            paddingLeft: "32px",
+          },
+        }}
       >
         <NameField source="company" label="Full name" />
         <TextField source="job_title" />
