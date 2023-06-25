@@ -1,4 +1,4 @@
-import { SearchInput, Filter, useListContext } from "react-admin";
+import { TextInput, Filter, useListContext } from "react-admin";
 import FilterInput from "../Inputs/FilterInput/FilterInput.tsx";
 import jobIcon from "../../assets/svg/job.svg";
 import locationIcon from "../../assets/svg/location.svg";
@@ -31,12 +31,7 @@ const FilterSidebar = () => {
           Job title
         </h4>
         <Filter>
-          <SearchInput
-            source="job_title"
-            placeholder=" Search by job title"
-            resettable={false}
-            alwaysOn
-          />
+          <TextInput source="job_title" label="Search by job title" alwaysOn />
         </Filter>
         <div className="filters__line" />
         <h4 className="filters__subtitle">

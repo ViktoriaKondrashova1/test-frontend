@@ -1,4 +1,4 @@
-import { SearchInput, Form, useRedirect } from "react-admin";
+import { TextInput, Form, useRedirect } from "react-admin";
 import FilterInput from "../../components/Inputs/FilterInput/FilterInput";
 import FiltersImg from "../../assets/png/filters-img.png";
 import RecentImg from "../../assets/png/recent-img.png";
@@ -21,9 +21,9 @@ const HomePage = () => {
             <img className="filters__icon" src={jobIcon} alt="job icon" />
             Job title
           </h4>
-          <SearchInput
+          <TextInput
             source="job_title"
-            placeholder=" Search by job title"
+            label="Search by job title"
             onChange={(e) =>
               redirect(
                 `/contacts?displayedFilters=%5B%5D&filter=%7B"job_title"%3A"${e.target.value}"%7D&order=ASC&page=1&perPage=10&sort=company`
