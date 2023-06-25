@@ -1,4 +1,4 @@
-import { TextInput, Form, useRedirect } from "react-admin";
+import { TextInput, Form, useRedirect, useStore } from "react-admin";
 import FilterInput from "../../components/Inputs/FilterInput/FilterInput";
 import FiltersImg from "../../assets/png/filters-img.png";
 import RecentImg from "../../assets/png/recent-img.png";
@@ -9,6 +9,7 @@ import "./HomePage.scss";
 
 const HomePage = () => {
   const redirect = useRedirect();
+  const [recentSearch] = useStore<string[]>("recentSearch", []);
 
   return (
     <div className="home-page__wrap">
@@ -77,10 +78,30 @@ const HomePage = () => {
         </div>
         <div className="home-page__recent">
           <h3 className="recent__title">Recent searches</h3>
-          <img src={RecentImg} alt="recent" className="recent__img" />
-          <p className="recent__text">
-            Your last four searches will be here for quick access
-          </p>
+          {recentSearch.length > 0 ? (
+            <ul className="recent__list">
+              {recentSearch.map((item, index) => (
+                <li
+                  key={index}
+                  className="recent__item"
+                  onClick={() =>
+                    redirect(
+                      `/contacts?displayedFilters=%5B%5D&filter=%7B"job_title"%3A"${item}"%7D&order=ASC&page=1&perPage=10&sort=company`
+                    )
+                  }
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <>
+              <img src={RecentImg} alt="recent" className="recent__img" />
+              <p className="recent__text">
+                Your last four searches will be here for quick access
+              </p>
+            </>
+          )}
         </div>
       </div>
     </div>

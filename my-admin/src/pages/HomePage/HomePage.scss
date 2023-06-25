@@ -93,4 +93,24 @@
     font-weight: 500;
     line-height: 18px;
   }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    border-bottom: 1px solid $highlight-gray;
+    padding: 5px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $highlight-gray;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
