@@ -1,12 +1,22 @@
 @import "../../variables.scss";
 
 .home-page {
-  margin-left: 252px;
+  padding-left: 24px;
   min-height: 828px;
+  width: calc(100% - 252px);
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__form {
+    width: 252px;
+    border-right: 1px solid $highlight-gray;
+    padding-top: 8px;
+  }
 
   &__add-filters {
     margin-top: 104px;
-    margin-left: 24px;
   }
 
   &__filters-info {

@@ -5,13 +5,21 @@ interface ICountryInputProps {
   label: string;
   url: string;
   alwaysOn: boolean;
+  onChange?: (value: string) => void;
 }
 
-const FilterInput = ({ source, label, url }: ICountryInputProps) => {
-  const { data } = useGetMany(url, { ids: [1, 2] });
+const FilterInput = ({ source, label, url, onChange }: ICountryInputProps) => {
+  const { data } = useGetMany(url, { ids: [1] });
 
   return (
-    <AutocompleteInput source={source} label={label} choices={data} alwaysOn />
+    <AutocompleteInput
+      source={source}
+      label={label}
+      choices={data}
+      onChange={onChange}
+      id={source}
+      alwaysOn
+    />
   );
 };
 
