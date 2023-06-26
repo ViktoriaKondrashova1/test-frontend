@@ -1,11 +1,16 @@
+import { useLogout } from "react-admin";
 import "./AccountInfo.scss";
 
 const AccountInfo = () => {
+  const logout = useLogout();
+
   return (
     <div className="account">
       <div className="account__header">
         <h1 className="account__title">Account info</h1>
-        <button className="account__logout">Log out</button>
+        <button className="account__logout" onClick={() => logout()}>
+          Log out
+        </button>
       </div>
       <div className="account__body">
         <form className="account__form">

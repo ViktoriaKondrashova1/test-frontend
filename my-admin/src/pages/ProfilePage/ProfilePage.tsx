@@ -10,7 +10,7 @@ const ProfilePage = () => {
       <div className="profile__account">
         <button
           className="profile__account__back"
-          onClick={() => redirect(`/contacts`)}
+          onClick={() => redirect("/contacts")}
         >
           Back to search
         </button>
