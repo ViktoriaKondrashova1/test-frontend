@@ -11,11 +11,13 @@ const ProfilePage = () => {
       <div className="profile__subs">
         <h1 className="profile__subs__title">Subscription</h1>
         <div className="profile__subs__plan">
-          <h3 className="profile__subs__subtitle">Free Plan</h3>
-          <p className="profile__subs__info">
-            You are on a free plan and your credits will refresh on May 18,
-            2023.
-          </p>
+          <div className="profile__subs__wrap">
+            <h3 className="profile__subs__subtitle">Free Plan</h3>
+            <p className="profile__subs__info">
+              You are on a free plan and your credits will refresh on May 18,
+              2023.
+            </p>
+          </div>
           <button className="profile__subs__btn">Change plan</button>
         </div>
       </div>
