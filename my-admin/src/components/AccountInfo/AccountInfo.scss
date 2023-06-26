@@ -1,0 +1,96 @@
+@import "../../variables.scss";
+
+.account {
+  width: 488px;
+  border-radius: 8px;
+  border: 1px solid $highlight-gray;
+  margin-top: 16px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $highlight-gray;
+    padding: 12px 16px 12px 16px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  &__logout {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    cursor: pointer;
+
+    &:before {
+      content: url("../../assets/svg/logout-icon.svg");
+      height: 18px;
+      margin: auto 8px auto;
+    }
+  }
+
+  &__body {
+    padding: 0 16px;
+  }
+
+  &__form {
+    display: flex;
+    gap: 16px;
+    padding-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  &__input {
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ebebed;
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__data-wrap {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $highlight-gray;
+    padding: 12px 0;
+
+    &__data {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      margin: 0;
+    }
+
+    &__btn {
+      display: flex;
+      border: none;
+      background-color: transparent;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      color: $logo-color;
+      cursor: pointer;
+
+      &:before {
+        content: url("../../assets/svg/edit-icon.svg");
+        height: 18px;
+        margin: auto 4px auto;
+      }
+    }
+  }
+}
