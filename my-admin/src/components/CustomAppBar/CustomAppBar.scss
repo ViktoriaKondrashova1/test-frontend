@@ -6,7 +6,6 @@
 
   &__logo-wrap {
     width: 252px;
-    border-right: 1px solid $highlight-gray;
   }
 
   &__logo {
@@ -24,6 +23,7 @@
     padding: 24px 0 0 24px;
     display: flex;
     border-bottom: 1px solid $highlight-gray;
+    border-left: 1px solid $highlight-gray;
   }
 
   &__total {
