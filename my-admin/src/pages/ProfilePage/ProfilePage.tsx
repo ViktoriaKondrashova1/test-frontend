@@ -1,11 +1,19 @@
+import { useRedirect } from "react-admin";
 import AccountInfo from "../../components/AccountInfo/AccountInfo";
 import "./ProfilePage.scss";
 
 const ProfilePage = () => {
+  const redirect = useRedirect();
+
   return (
     <div className="profile">
       <div className="profile__account">
-        <button className="profile__account__back">Back to search</button>
+        <button
+          className="profile__account__back"
+          onClick={() => redirect(`/contacts`)}
+        >
+          Back to search
+        </button>
         <AccountInfo />
       </div>
       <div className="profile__subs">
