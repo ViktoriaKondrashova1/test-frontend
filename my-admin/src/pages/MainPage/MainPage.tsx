@@ -1,22 +1,13 @@
-import { Admin, Resource, fetchUtils, CustomRoutes } from "react-admin";
+import { Admin, Resource, CustomRoutes } from "react-admin";
 import { Route } from "react-router-dom";
+import { httpClient } from "../../api/api";
 import simpleRestProvider from "ra-data-simple-rest";
 import ContactsList from "../../components/ContactsList/ContactsList";
 import CustomLayout from "../../components/CustomLayout/CustomLayout";
 import LoginPage from "../LoginPage/LoginPage";
 import HomePage from "../HomePage/HomePage";
 import ProfilePage from "../ProfilePage/ProfilePage";
-import { getToken } from "../../api/api";
 import theme from "../../theme";
-
-const httpClient = async (url: string, options: fetchUtils.Options = {}) => {
-  const token = await getToken().then((value) => value.accessToken);
-  const user = {
-    token: `Bearer ${token}`,
-    authenticated: !!token,
-  };
-  return fetchUtils.fetchJson(url, { ...options, user });
-};
 
 const MainPage = () => {
   return (
