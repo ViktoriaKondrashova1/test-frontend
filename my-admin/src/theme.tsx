@@ -17,6 +17,7 @@ const theme = {
   typography: {
     fontSize: 14,
     fontFamily: "Mulish, sans-serif",
+    lineHeight: "24px",
   },
   components: {
     ...defaultTheme.components,
@@ -28,7 +29,6 @@ const theme = {
             backgroundColor: "#e7e8ef",
             height: "48px",
             fontWeight: 600,
-            lineHeight: "24px",
             paddingLeft: "69px",
           },
           "& .RaDatagrid-headerCell:first-of-type": {
@@ -83,19 +83,14 @@ const theme = {
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: {
+        notchedOutline: {
           borderColor: "#E7E8EF",
           borderRadius: "6px",
         },
         input: {
           padding: "0 0 0 36px",
-          fontSize: "14px",
-          lineHeight: "24px",
           height: "40px",
           fontFamily: "Mulish",
-          "&::placeholder": {
-            color: "#9195A4",
-          },
         },
       },
     },
@@ -113,8 +108,6 @@ const theme = {
         },
         input: {
           height: "fit-content",
-          fontSize: "14px",
-          lineHeight: "24px",
         },
       },
     },
@@ -177,7 +170,6 @@ const theme = {
         },
         text: {
           color: "#151515",
-          fontSize: "14px",
           lineHeight: "32px",
         },
       },

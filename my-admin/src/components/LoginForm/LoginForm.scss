@@ -8,7 +8,6 @@
   position: relative;
 
   &__label {
-    font-size: 14px;
     font-weight: 600;
     line-height: 20px;
   }
@@ -23,7 +22,6 @@
 
     &::placeholder {
       color: #b1b5c3;
-      font-size: 14px;
       line-height: 20px;
     }
   }
@@ -51,9 +49,7 @@
     border-radius: 8px;
     background-color: $logo-color;
     border: none;
-    font-size: 14px;
     font-weight: 600;
-    line-height: 24px;
     color: white;
     cursor: pointer;
   }

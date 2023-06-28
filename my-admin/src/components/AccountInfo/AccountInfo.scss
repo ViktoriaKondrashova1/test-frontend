@@ -17,16 +17,13 @@
     margin: 0;
     font-size: 16px;
     font-weight: 700;
-    line-height: 24px;
   }
 
   &__logout {
     display: flex;
     border: none;
     background-color: transparent;
-    font-size: 14px;
     font-weight: 600;
-    line-height: 24px;
     cursor: pointer;
 
     &:before {
@@ -48,7 +45,6 @@
   }
 
   &__label {
-    font-size: 14px;
     font-weight: 600;
     line-height: 20px;
   }
@@ -59,7 +55,6 @@
     border-radius: 8px;
     border: 1px solid #ebebed;
     padding: 14px 16px;
-    font-size: 14px;
     line-height: 20px;
   }
 
@@ -70,9 +65,7 @@
     padding: 12px 0;
 
     &__data {
-      font-size: 14px;
       font-weight: 600;
-      line-height: 24px;
       margin: 0;
     }
 
@@ -80,9 +73,7 @@
       display: flex;
       border: none;
       background-color: transparent;
-      font-size: 14px;
       font-weight: 600;
-      line-height: 24px;
       color: $logo-color;
       cursor: pointer;
 

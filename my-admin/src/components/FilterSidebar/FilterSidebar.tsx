@@ -4,6 +4,7 @@ import FilterInput from "../Inputs/FilterInput/FilterInput.tsx";
 import jobIcon from "../../assets/svg/job.svg";
 import locationIcon from "../../assets/svg/location.svg";
 import industryIcon from "../../assets/svg/Industry.svg";
+import SearchIcon from "../../assets/svg/search-icon.svg";
 import "./FilterSidebar.scss";
 
 const FilterSidebar = () => {
@@ -56,6 +57,19 @@ const FilterSidebar = () => {
             label="Search by job title"
             alwaysOn
             resettable
+            sx={{
+              position: "relative",
+              "&:before": {
+                content: `url(${SearchIcon})`,
+                position: "absolute",
+                height: "18px",
+                top: "25%",
+                marginLeft: "12px",
+              },
+              "& .MuiInputLabel-root": {
+                paddingLeft: "24px",
+              },
+            }}
           />
         </Filter>
         <div className="filters__line" />
