@@ -54,7 +54,8 @@ const FilterSidebar = () => {
         <Filter>
           <TextInput
             source="job_title"
-            label="Search by job title"
+            label={false}
+            placeholder="Search by job title"
             alwaysOn
             resettable
             sx={{

@@ -105,9 +105,16 @@ const theme = {
       styleOverrides: {
         root: {
           width: "100%",
+          "& .Mui-focused": {
+            borderColor: "#3626A7",
+          },
         },
         input: {
           height: "fit-content",
+        },
+        listbox: {
+          height: "212px",
+          padding: "8px",
         },
       },
     },

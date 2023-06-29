@@ -5,6 +5,7 @@ import RecentImg from "../../assets/png/recent-img.png";
 import jobIcon from "../../assets/svg/job.svg";
 import locationIcon from "../../assets/svg/location.svg";
 import industryIcon from "../../assets/svg/Industry.svg";
+import SearchIcon from "../../assets/svg/search-icon.svg";
 import "./HomePage.scss";
 
 const HomePage = () => {
@@ -24,12 +25,26 @@ const HomePage = () => {
           </h4>
           <TextInput
             source="job_title"
-            label="Search by job title"
+            label={false}
+            placeholder="Search by job title"
             onChange={(e) =>
               redirect(
                 `/contacts?displayedFilters=%5B%5D&filter=%7B"job_title"%3A"${e.target.value}"%7D&order=ASC&page=1&perPage=10&sort=company`
               )
             }
+            sx={{
+              position: "relative",
+              "&:before": {
+                content: `url(${SearchIcon})`,
+                position: "absolute",
+                height: "18px",
+                top: "25%",
+                marginLeft: "12px",
+              },
+              "& .MuiInputLabel-root": {
+                paddingLeft: "24px",
+              },
+            }}
           />
           <div className="filters__line" />
           <h4 className="filters__subtitle">
