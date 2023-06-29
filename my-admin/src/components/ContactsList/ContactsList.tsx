@@ -24,6 +24,7 @@ const ContactsList = () => {
             borderRight: "1px solid #E7E8EF",
             width: "231px",
             paddingLeft: "32px",
+            borderTopLeftRadius: "8px",
           },
         }}
       >

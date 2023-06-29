@@ -25,11 +25,17 @@ const theme = {
       styleOverrides: {
         root: {
           backgroundColor: "#ffffff",
+          border: "1px solid #e7e8ef",
+          borderRadius: "8px",
+
           "& .RaDatagrid-headerCell": {
             backgroundColor: "#e7e8ef",
             height: "48px",
             fontWeight: 600,
             paddingLeft: "69px",
+          },
+          "& .RaDatagrid-headerCell:last-child": {
+            borderTopRightRadius: "8px",
           },
           "& .RaDatagrid-headerCell:first-of-type": {
             display: "none",
@@ -73,6 +79,13 @@ const theme = {
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          border: "none",
+        },
+      },
+    },
     MuiTextField: {
       styleOverrides: {
         root: {
@@ -113,7 +126,7 @@ const theme = {
           height: "fit-content",
         },
         listbox: {
-          height: "212px",
+          maxHeight: "212px",
           padding: "8px",
         },
       },

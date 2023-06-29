@@ -18,7 +18,6 @@ const FilterInput = ({ source, label, url, onChange }: ICountryInputProps) => {
       choices={data}
       onChange={onChange}
       id={source}
-      // TextFieldProps={{ placeholder: placeholder }}
       alwaysOn
     />
   );
