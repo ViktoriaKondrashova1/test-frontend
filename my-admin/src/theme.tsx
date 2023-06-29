@@ -57,6 +57,10 @@ const theme = {
               backgroundColor: "#F8F9FC",
             },
           },
+          "& .RaDatagrid-expandedPanel": {
+            position: "absolute",
+            marginLeft: "-300px",
+          },
           "& .RaLayout-appFrame": { marginTop: 0, backgroundColor: "white" },
         },
       },
