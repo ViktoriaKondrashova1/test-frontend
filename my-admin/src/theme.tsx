@@ -69,7 +69,7 @@ const theme = {
       styleOverrides: {
         root: {
           "& .RaList-main": {
-            paddingTop: "24px",
+            padding: "24px 24px 0 0",
           },
         },
       },
@@ -160,7 +160,7 @@ const theme = {
             backgroundColor: "white",
           },
           "& .RaLayout-content": {
-            padding: "0 24px 0 0",
+            padding: "0",
           },
         },
       },
