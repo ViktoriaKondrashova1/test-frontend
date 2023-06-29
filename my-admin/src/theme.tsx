@@ -1,4 +1,5 @@
 import { defaultTheme } from "react-admin";
+import SortIcon from "./assets/svg/sort-icon.svg";
 
 const theme = {
   ...defaultTheme,
@@ -33,6 +34,10 @@ const theme = {
             height: "48px",
             fontWeight: 600,
             paddingLeft: "69px",
+
+            "& .MuiTableSortLabel-icon": {
+              display: "none",
+            },
           },
           "& .RaDatagrid-headerCell:last-child": {
             borderTopRightRadius: "8px",
@@ -149,6 +154,24 @@ const theme = {
       styleOverrides: {
         root: {
           display: "none",
+        },
+      },
+    },
+    MuiButtonBase: {
+      styleOverrides: {
+        root: {
+          "&.MuiTableSortLabel-root": {
+            "&::after": {
+              content: `url(${SortIcon})`,
+              height: "18px",
+              margin: "auto 0 auto 4px",
+            },
+            "&.Mui-active": {
+              "& .MuiTableSortLabel-icon": {
+                display: "none",
+              },
+            },
+          },
         },
       },
     },
