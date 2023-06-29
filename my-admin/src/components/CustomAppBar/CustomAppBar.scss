@@ -9,6 +9,7 @@
   }
 
   &__logo {
+    height: 100%;
     font-weight: 900;
     font-size: 24px;
     line-height: 32px;
@@ -18,12 +19,15 @@
     padding: 24px 0 0 24px;
   }
 
-  &__total-wrap {
+  &__wrap {
     width: calc(100% - 252px);
-    padding: 24px 0 0 24px;
+    padding: 24px 24px 0 24px;
     display: flex;
     border-bottom: 1px solid $highlight-gray;
-    border-left: 1px solid $highlight-gray;
+  }
+
+  &__total-wrap {
+    display: flex;
   }
 
   &__total {
@@ -42,5 +46,20 @@
     color: $logo-color;
     font-weight: 600;
     text-align: center;
+  }
+
+  &__btn {
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid $highlight-gray;
+    background: #f5f6f9;
+    padding: 4px 2px;
+    color: $placeholder-color;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
   }
 }
