@@ -1,14 +1,19 @@
 import {
   Pagination,
   PaginationActions,
-  PaginationActionsProps,
   PaginationProps,
   useListContext,
 } from "react-admin";
 
-const Actions = (props: PaginationActionsProps) => {
-  return <PaginationActions {...props} />;
-};
+const Actions = (props: {}) => (
+  <PaginationActions
+    page={1}
+    rowsPerPage={10}
+    count={0}
+    onPageChange={() => {}}
+    {...props}
+  />
+);
 
 const CustomPagination = (props: PaginationProps) => {
   const { page, setPage } = useListContext();
