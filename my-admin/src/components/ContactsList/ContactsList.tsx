@@ -5,7 +5,6 @@ import NameField from "../NameField/NameField";
 import FilterSidebar from "../FilterSidebar/FilterSidebar";
 import CustomPagination from "../CustomPagination/CustomPagination";
 import SubsPopup from "../SubsPopup/SubsPopup";
-import "./ContactsList.scss";
 
 const ContactsList = () => {
   return (
@@ -25,6 +24,7 @@ const ContactsList = () => {
             borderRight: "1px solid #E7E8EF",
             width: "231px",
             paddingLeft: "32px",
+            borderTopLeftRadius: "8px",
           },
         }}
       >

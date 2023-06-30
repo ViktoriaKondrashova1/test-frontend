@@ -1,4 +1,5 @@
 import { defaultTheme } from "react-admin";
+import SortIcon from "./assets/svg/sort-icon.svg";
 
 const theme = {
   ...defaultTheme,
@@ -17,6 +18,7 @@ const theme = {
   typography: {
     fontSize: 14,
     fontFamily: "Mulish, sans-serif",
+    lineHeight: "24px",
   },
   components: {
     ...defaultTheme.components,
@@ -24,12 +26,21 @@ const theme = {
       styleOverrides: {
         root: {
           backgroundColor: "#ffffff",
+          border: "1px solid #e7e8ef",
+          borderRadius: "8px",
+
           "& .RaDatagrid-headerCell": {
             backgroundColor: "#e7e8ef",
             height: "48px",
             fontWeight: 600,
-            lineHeight: "24px",
             paddingLeft: "69px",
+
+            "& .MuiTableSortLabel-icon": {
+              display: "none",
+            },
+          },
+          "& .RaDatagrid-headerCell:last-child": {
+            borderTopRightRadius: "8px",
           },
           "& .RaDatagrid-headerCell:first-of-type": {
             display: "none",
@@ -51,6 +62,10 @@ const theme = {
               backgroundColor: "#F8F9FC",
             },
           },
+          "& .RaDatagrid-expandedPanel": {
+            position: "absolute",
+            marginLeft: "-300px",
+          },
           "& .RaLayout-appFrame": { marginTop: 0, backgroundColor: "white" },
         },
       },
@@ -59,7 +74,7 @@ const theme = {
       styleOverrides: {
         root: {
           "& .RaList-main": {
-            paddingTop: "24px",
+            padding: "24px 24px 0 0",
           },
         },
       },
@@ -73,6 +88,13 @@ const theme = {
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          border: "none",
+        },
+      },
+    },
     MuiTextField: {
       styleOverrides: {
         root: {
@@ -83,19 +105,14 @@ const theme = {
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        root: {
+        notchedOutline: {
           borderColor: "#E7E8EF",
           borderRadius: "6px",
         },
         input: {
           padding: "0 0 0 36px",
-          fontSize: "14px",
-          lineHeight: "24px",
           height: "40px",
           fontFamily: "Mulish",
-          "&::placeholder": {
-            color: "#9195A4",
-          },
         },
       },
     },
@@ -110,11 +127,16 @@ const theme = {
       styleOverrides: {
         root: {
           width: "100%",
+          "& .Mui-focused": {
+            borderColor: "#3626A7",
+          },
         },
         input: {
           height: "fit-content",
-          fontSize: "14px",
-          lineHeight: "24px",
+        },
+        listbox: {
+          maxHeight: "212px",
+          padding: "8px",
         },
       },
     },
@@ -135,6 +157,24 @@ const theme = {
         },
       },
     },
+    MuiButtonBase: {
+      styleOverrides: {
+        root: {
+          "&.MuiTableSortLabel-root": {
+            "&::after": {
+              content: `url(${SortIcon})`,
+              height: "18px",
+              margin: "auto 0 auto 4px",
+            },
+            "&.Mui-active": {
+              "& .MuiTableSortLabel-icon": {
+                display: "none",
+              },
+            },
+          },
+        },
+      },
+    },
     RaLayout: {
       styleOverrides: {
         root: {
@@ -143,7 +183,7 @@ const theme = {
             backgroundColor: "white",
           },
           "& .RaLayout-content": {
-            padding: "0 24px 0 0",
+            padding: "0",
           },
         },
       },
@@ -177,7 +217,6 @@ const theme = {
         },
         text: {
           color: "#151515",
-          fontSize: "14px",
           lineHeight: "32px",
         },
       },
