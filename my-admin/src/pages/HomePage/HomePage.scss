@@ -1,0 +1,111 @@
+@import "../../variables.scss";
+
+.home-page {
+  padding-left: 24px;
+  min-height: 828px;
+  width: calc(100% - 252px);
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__form {
+    width: 252px;
+    border-right: 1px solid $highlight-gray;
+    padding-top: 8px;
+  }
+
+  &__add-filters {
+    margin-top: 104px;
+  }
+
+  &__filters-info {
+    width: 368px;
+    margin: 0 auto 0 auto;
+  }
+
+  &__recent {
+    width: 488px;
+    border-radius: 16px;
+    border: 1px solid $highlight-gray;
+    margin: 56px auto 0 auto;
+  }
+}
+
+.add-filters {
+  &__arrow {
+    background-image: url(../../assets/svg/home-arrow.svg);
+    width: 41px;
+    height: 9px;
+  }
+
+  &__text {
+    margin: 0 0 0 20px;
+    width: 141px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+}
+
+.filters-info {
+  &__img {
+    display: flex;
+    margin: 0 auto 24px auto;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+.recent {
+  &__title {
+    display: flex;
+    font-weight: 600;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid $highlight-gray;
+
+    &:before {
+      content: url(../../assets//svg/recent-icon.svg);
+      margin: auto 8px auto 16px;
+      height: 18px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    margin: 16px auto 9px auto;
+  }
+
+  &__text {
+    width: 210px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    border-bottom: 1px solid $highlight-gray;
+    padding: 5px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $highlight-gray;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

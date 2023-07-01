@@ -1,0 +1,76 @@
+@import "../../variables.scss";
+
+.profile {
+  padding: 16px 112px;
+  display: flex;
+  gap: 32px;
+
+  &__account__back {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    line-height: 20px;
+    color: $placeholder-color;
+    cursor: pointer;
+
+    &:before {
+      content: url("../../assets/svg/back-arrow.svg");
+      height: 20px;
+      margin: auto 4px auto;
+    }
+  }
+
+  &__subs {
+    margin-top: 36px;
+    width: -webkit-fill-available;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      margin: 0;
+      margin-bottom: 16px;
+    }
+
+    &__plan {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      border-radius: 8px;
+      background: $vivid-blue;
+      padding: 16px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 4px;
+    }
+
+    &__info {
+      line-height: 20px;
+      margin: 0;
+    }
+
+    &__btn {
+      display: flex;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      background-color: $logo-color;
+      font-weight: 600;
+      text-align: center;
+      align-items: center;
+      color: $bg-color;
+      cursor: pointer;
+
+      &:before {
+        content: url("../../assets/svg/subs-icon.svg");
+        height: 18px;
+        margin: auto 8px auto;
+      }
+    }
+  }
+}

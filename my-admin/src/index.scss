@@ -1,0 +1,87 @@
+@import "./variables.scss";
+
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./assets/fonts/mulish-v12-latin-200.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./assets/fonts/mulish-v12-latin-300.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/mulish-v12-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/mulish-v12-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/mulish-v12-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/mulish-v12-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./assets/fonts/mulish-v12-latin-800.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/mulish-v12-latin-900.woff2") format("woff2");
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: $highlight-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b1b5c3;
+  border-radius: 3px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Mulish, Inter, sans-serif;
+  font-size: 14px;
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+}

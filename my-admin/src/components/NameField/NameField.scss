@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+.name-field {
+  &__button {
+    display: flex;
+    align-items: center;
+    background: $bg-color;
+    border: 1px solid $highlight-gray;
+    border-radius: 8px;
+    padding: 10px 24px;
+    color: $logo-color;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__icon {
+    background-image: url(../../assets/svg/Icon-user.svg);
+    height: 23px;
+    width: 22px;
+    margin-right: 8px;
+  }
+}

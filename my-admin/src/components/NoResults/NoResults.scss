@@ -1,0 +1,40 @@
+@import "../../variables.scss";
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__img {
+    background-image: url(../../assets/png/no-results.png);
+    width: 160px;
+    height: 140px;
+  }
+
+  &__title {
+    margin: 16px 0 8px 0;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__text {
+    width: 368px;
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  &__btn {
+    padding: 8px 70px;
+    font-weight: 600;
+    color: $logo-color;
+    background: #f5f6f9;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+}
